@@ -15,7 +15,7 @@ const Inicio = () => {
 
     useEffect(() => {
         const script = document.createElement("script");
-        script.src = "/js/panel/instafeed.js";
+        script.src = "/js/instafeed.js";
         script.async = true;
 
         script.onload = () => {
