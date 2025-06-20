@@ -128,6 +128,29 @@
 
                     </div>
                 </div>
+                <div class="w-full">
+                    <div class=" mb-6">
+                        <h2 class="mb-2 font-semibold text-gray-900 text-base">Cover Manager Sucursales</h2>
+
+                        <div class="mb-3">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                for="link_covermanager">Script</label>
+                            <p class="text-xs mb-2">
+                                <span class="font-semibold">Importante:</span> Solo debes agregar aquí el <span
+                                    class="font-semibold">script</span>. El <span class="font-semibold">iframe</span> debe
+                                configurarse directamente en la sucursal correspondiente.<br>
+                                Para un funcionamiento correcto, asegúrate de ingresar el script de manera adecuada.<br>
+                                <span class="block mt-2"><span class="font-semibold">Ejemplo:</span> <code>&lt;script
+                                        src="https://covermanager.com/tu-script.js"&gt;&lt;/script&gt;</code></span>
+                            </p>
+                            <input id="link_covermanager" name="link_covermanager"
+                                value="{{ $data->link_covermanager }}" autocomplete="off"
+                                class="mb-4 disabled:opacity-50 disabled:pointer-events-none bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        </div>
+
+
+                    </div>
+                </div>
                 {{-- @endcanany
 			
 					@can(PermissionKey::Socios['permissions']['update']['name']) --}}

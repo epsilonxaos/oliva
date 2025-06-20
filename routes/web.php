@@ -8,6 +8,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\SucursalController;
 use App\Http\Controllers\WebsiteController;
+use App\Models\Website;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,7 +30,10 @@ Route::view('/bolsa-de-trabajo', 'layouts.app')->where('path', '.*');
 Route::view('/eventos', 'layouts.app')->where('path', '.*');
 Route::view('/politicas-privacidad', 'layouts.app')->where('path', '.*');
 Route::view('/politicas-reservacion', 'layouts.app')->where('path', '.*');
-Route::view('/sucursal/{slug}', 'layouts.app')->where('path', '.*');
+Route::get('/sucursal/{slug}', function ($slug) {
+	$w = Website::find(1);
+	return view('layouts.app', ['st' => $w->link_covermanager]);
+})->where('path', '.*');
 
 Route::post('/send/mailbolsa', [MailController::class, 'sendBolsa']);
 Route::post('/send/mailEvento', [MailController::class, 'sendEvento']);

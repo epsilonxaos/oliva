@@ -41,5 +41,6 @@ class Website extends Model implements TranslatableContract
 		'img_promo',
 		'img_promo_movil',
 		'emails_cc',
+		'link_covermanager'
 	];
 }

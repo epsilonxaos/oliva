@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import { _PATH_SOURCES } from "../utils/const";
 import { useTranslation } from "react-i18next";
 import FadeInUpDiv from "../components/FadeInUp";
+import parse from "html-react-parser";
 
 export default function SucursalDetalle() {
     const [data, setData] = useState({});
@@ -28,8 +29,8 @@ export default function SucursalDetalle() {
     }, [slug]);
 
     return (
-        <section className="flex max-w-[1920px] flex-row flex-wrap text-white">
-            <figure className="mb-12 w-full overflow-hidden lg:mb-0 lg:w-1/2">
+        <section className="flex  max-w-[1920px] flex-row flex-wrap text-white">
+            <figure className="mb-12 size-full overflow-hidden lg:sticky lg:top-[74px] lg:mb-0 lg:h-[calc(100dvh-74px)] lg:w-1/2">
                 <img
                     src={_PATH_SOURCES + data.cover}
                     alt={data.title}
@@ -60,6 +61,10 @@ export default function SucursalDetalle() {
                             {i18n.language == "es" ? data.descEs : data.descEn}
                         </Text>
 
+                        <hr className="my-8" />
+                        <IframeManager
+                            reserva_iframe={data.script_covermanager}
+                        />
                         <hr className="my-8" />
 
                         <Text.Subtitle>{t("sucursal.horarios")}</Text.Subtitle>
@@ -187,3 +192,13 @@ export default function SucursalDetalle() {
         </section>
     );
 }
+
+const IframeManager = ({ reserva_iframe }) => {
+    if (!reserva_iframe) return null;
+
+    return (
+        <div>
+            <div className="min-h-[450px]">{parse(reserva_iframe)}</div>
+        </div>
+    );
+};

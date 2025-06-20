@@ -197,6 +197,16 @@
                             autocomplete="off"
                             class="mb-4 disabled:opacity-50 disabled:pointer-events-none bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     </div>
+                    <div class="mb-3 w-full">
+                        <label for="script_covermanager"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Cover Manager</label>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">
+                            Importante: Solo ingresa el código <code>&lt;iframe&gt;</code> aquí. Si necesitas agregar el
+                            script de Cover Manager de forma global en el sitio, configúralo desde el módulo "Generales".
+                        </p>
+                        <textarea id="script_covermanager" name="script_covermanager" autocomplete="off" cols="30" rows="10"
+                            class="mb-4 disabled:opacity-50 disabled:pointer-events-none bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">{{ $data->script_covermanager }}</textarea>
+                    </div>
                 </div>
                 <div class="w-full mb-10">
                     <h2 class="mb-2 font-semibold uppercase text-gray-900 text-base">Horarios y Croquis</h2>

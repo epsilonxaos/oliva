@@ -15,13 +15,12 @@ const Inicio = () => {
 
     useEffect(() => {
         const script = document.createElement("script");
-        script.src = "/js/panel/instafeed.js";
+        script.src = _PATH_SOURCES + "js/instafeed.js";
         script.async = true;
 
         script.onload = () => {
             var feed = new window.Instafeed({
-                accessToken:
-                    "IGQWRNbnFTVFJZAZAUdHT0J1a2VJZAm4zb3VtbFRueWkwanpPYUdDQ1M5ajcxWTJGM2NVMExtWGRqVjdOVEg2dGpHaGJjWVU4alQ2Q1hUcDhvb1ZAJRmc1RXZADWU1UX0VhS0lDbHhKdWZAUbkhFdTNhOV9USXVwLTVfcGMZD",
+                accessToken: import.meta.env.VITE_INSTAGRAM_TOKEN_ACCESS,
             });
             feed.run();
         };

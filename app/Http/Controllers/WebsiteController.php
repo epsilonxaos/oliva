@@ -92,6 +92,7 @@ class WebsiteController extends Controller
 		if ($request->has('email_bolsa')) $upd->email_bolsa = $request->email_bolsa;
 		if ($request->has('email_eventos')) $upd->email_eventos = $request->email_eventos;
 		if ($request->has('emails_cc')) $upd->emails_cc = $request->emails_cc;
+		if ($request->has('link_covermanager')) $upd->link_covermanager = $request->link_covermanager;
 
 		foreach ($this->locales as $locale) {
 			if ($request->has('home_s1_title')) $upd->translateOrNew($locale)->home_s1_title = $request->home_s1_title[$locale];

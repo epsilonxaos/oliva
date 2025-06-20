@@ -32,7 +32,7 @@ function Instafeed(options) {
         success: null,
         target: "Instafeed",
         template:
-            '<a href="{{link}}"><img title="{{caption}}" src="{{image}}" /></a>',
+            '<a href="{{link}}" target="_blank"><img class="img-instagram" title="{{caption}}" src="{{image}}" /></a>',
         templateBoundaries: ["{{", "}}"],
         transform: null,
         after: function () {

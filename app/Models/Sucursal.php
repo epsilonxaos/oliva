@@ -33,6 +33,7 @@ class Sucursal extends Model
 		'descEs',
 		'descEn',
 		'icon_movil',
-		'urlfacturacion'
+		'urlfacturacion',
+		'script_covermanager',
 	];
 }

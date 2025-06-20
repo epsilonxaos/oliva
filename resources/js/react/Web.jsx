@@ -79,7 +79,7 @@ export default function Web() {
 
             <Toaster />
 
-            <main className="mx-auto min-h-svh pt-[76px] sm:pt-[76px]">
+            <main className="mx-auto min-h-svh pt-[57px] sm:pt-[65px] md:pt-[74px]">
                 <AnimatePresence mode="wait">
                     <Routes location={location} key={location.pathname}>
                         <Route

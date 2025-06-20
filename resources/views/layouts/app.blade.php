@@ -51,6 +51,10 @@
 
     @viteReactRefresh
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/react/App.jsx'])
+
+    @if (isset($st))
+        {!! $st !!}
+    @endif
 </head>
 
 <body class="antialiased min-h-svh bg-repeat bg-auto bg-center bg-blanco">

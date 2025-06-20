@@ -115,6 +115,7 @@ class SucursalController extends Controller
 		$row->descEs = $request->descEs;
 		$row->descEn = $request->descEn;
 		$row->urlfacturacion = $request->urlfacturacion;
+		$row->script_covermanager = $request->script_covermanager;
 
 		$row->save();
 
@@ -220,6 +221,7 @@ class SucursalController extends Controller
 		$row->descEs = $request->descEs;
 		$row->descEn = $request->descEn;
 		$row->urlfacturacion = $request->urlfacturacion;
+		$row->script_covermanager = $request->script_covermanager;
 
 		$row->save();
 
